@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+
+.header .links ul {
+  display: flex;
+  flex-direction: row; /* Bu satır eklenmeli, elemanları yatay hizalar */
+  padding: 0;
+  margin: 0;
+}
+
+.header .links ul li {
+  margin-left: 25px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row; /* Buradaki yön de yatay olmalı */
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header .links ul li a:hover {
+  border-bottom: 2px solid #333333;
+}
+.header .icons i{
+  margin-left: 15px;
+  cursor: pointer;
+}
+.header i.material-symbols-outlined {
+  display: none;
+}
+/* main */
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 80px;
+}
+.main .text h1{
+  font-size: 6vw;
+  position: relative;
+  bottom: 60px;
+  text-transform: uppercase;
+}
+.main .text p{
+  font-size: 0.8vw;
+  position: relative;
+  bottom: 40px;
+}
+.main .text button{
+  padding: 0.8vw 4vw;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #045049;
+  cursor: pointer;
+}
+.main .text button:hover{
+  background-color: #29726b;
+  transition: background-color 0.5s ease; /* Sadece arka plan rengini değiştirir */
+}
+.main .img img{
+  max-width: 100%;
+  width: 500px;
+  object-fit: cover;
+}
+.main .img {
+  margin-bottom: 40px; /* Büyük görselin altına boşluk bırakıyoruz */
+  padding-bottom: 40px; /* Alternatif olarak padding de kullanabiliriz */
+}
+.img{
+  animation: img 7s infinite;
+  max-height: 90%;
+}
+@keyframes img {
+  0% { 
+    transform: translateY(0);
+  }
+  50% { 
+    transform: translateY(-4%); /* Daha az yukarıya kaymasını sağla */
+  }
+  100% { 
+    transform: translateY(0);
+  }
+}
+/*-- section --*/
+.section-1 .services{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.services-1 {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Metni ve simgeyi alt alta hizalar */
+  align-items: center; /* Ortalar */
+  justify-content: center; /* Dikeyde merkezler */
+  flex: 1; /* Her bir öğeye esnek genişlik verir */
+  min-width: 150px; /* Minimum genişlik */
+  max-width: 300px; /* Maksimum genişlik */
+}
+.services-1 img{
+  width: 100px;
+  height: auto;
+}
+.services-1 h3{
+  font-size: 1vw;
+}
+.services-1 p{
+  font-size: 0.8vw;
+}
+@media screen and (max-width: 800px){
+  .header .icons{
+    display: none;
+  }
+}
+.section-1 .services {
+  gap: 2rem;
+}
+/* Küçük resimlerin üst kısmına margin ekliyoruz */
+.section-1 .services-1 {
+  margin-top: 30px; /* Küçük resimler arasında boşluk ekliyoruz */
+}
